@@ -7,7 +7,7 @@ grade: stable
 confinement: strict
 
 apps:
-  instagraph:
+  pockit:
     command: desktop-launch $SNAP/bin/pockit
     plugs:
       - unity7
@@ -27,7 +27,7 @@ parts:
     source: .
     organize:
         launcher.sh: bin/pockit
-  instagraph:
+  pockit:
     plugin: qmake
     source: https://github.com/turanmahmudov/PockIt2.git
     qt-version: qt5
