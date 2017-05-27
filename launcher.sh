@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Disable the chromium sandbox to work around https://launchpad.net/bugs/1599234.
+# Rely on snapd’s security policy instead.
+export OXIDE_NO_SANDBOX=1
+
 if [ "$SNAP_ARCH" = "amd64" ]; then
     ARCH="x86_64-linux-gnu"
 elif [ "$SNAP_ARCH" = "armhf" ]; then
@@ -10,4 +14,4 @@ else
     ARCH="$SNAP_ARCH-linux-gnu"
 fi
 
-exec $SNAP/lib/$ARCH/bin/PockIt "$@"
+exec $SNAP/lib/$ARCH/bin/pockit "$@"
