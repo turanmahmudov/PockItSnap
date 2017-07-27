@@ -14,4 +14,4 @@ else
     ARCH="$SNAP_ARCH-linux-gnu"
 fi
 
-exec $SNAP/lib/$ARCH/bin/pockit "$@"
+exec $SNAP/opt/PockIt/bin/PockIt "$@"
