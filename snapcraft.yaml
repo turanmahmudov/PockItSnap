@@ -1,5 +1,5 @@
 name: pockit
-version: '0.1.4'
+version: '0.1.5'
 summary: Unofficial Pocket Client
 description: Unofficial Pocket Client
 
@@ -20,7 +20,6 @@ apps:
       - alsa
       - location-control
       - location-observe
-      - browser-sandbox
 
 parts:
   launcher:
@@ -37,6 +36,8 @@ parts:
     - qtubuntu-desktop
     - qmlscene
     - qml-module-ubuntu-components
+    - liboxideqt-qmlplugin
+    - qml-module-oxide-ubuntu
     - qtdeclarative5-dev
     stage-packages:
     - ubuntu-sdk-libs
@@ -44,6 +45,8 @@ parts:
     - qmlscene
     - qml-module-ubuntu-components
     - qtdeclarative5-dev
+    - liboxideqt-qmlplugin
+    - qml-module-oxide-ubuntu
     - gstreamer1.0-pulseaudio
     - gstreamer1.0-libav
     after: [desktop-qt5]
