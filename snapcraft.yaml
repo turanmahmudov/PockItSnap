@@ -1,5 +1,5 @@
 name: pockit
-version: '0.1.5.2'
+version: '0.1.5.3'
 summary: Unofficial Pocket Client
 description: Unofficial Pocket Client
 
@@ -47,6 +47,8 @@ parts:
     - liboxideqt-qmlplugin
     - gstreamer1.0-pulseaudio
     - gstreamer1.0-libav
+    - qml-module-qtsysteminfo
+    - qml-module-ubuntu-connectivity
     after: [desktop-qt5]
     organize:
       icon.png: meta/gui/pockit.png
